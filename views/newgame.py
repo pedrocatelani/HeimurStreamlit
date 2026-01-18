@@ -11,8 +11,10 @@ def finish_character_creation(data, game):
             response = re.post(url, json=data)
             if response.status_code == 200 or response.status_code == 201:
                 st.success("✅ Character created!")
-                print(response.json())
-                game.atr = response.json()
+                sheet = response.json()
+                game.atr = sheet["atr"]
+                game.specs = sheet["specs"]
+                game.status = sheet["status"]
                 sleep(3)
                 go_to("camp")
             else:
@@ -37,6 +39,16 @@ alignment_map = {
     "land-dweller": "Land Dweller",
     "sea-voyager": "Sea Voyager",
     "sky-dreamer": "Sky Dreamer",
+}
+
+descriptions = {
+    "sun-born": "Born graced by the sunlight, this creatures know too well how to take advantage over foes weakness...\n\n>Low Mana buff; Stronger elemental strikes",
+    "moon-blessed": "Born with a touch of the moonlight, this specimens have a natural connection to the mana lines. \n\n>High Mana buff; Initial Charisma buff",
+    "stars-gazer": "Pointed ears, and eagle eyes, the Star Gazers will see you days before you even appear.\n\n >Initial Attack buff; Crit multiplier buff",
+    "land-dweller": "Drifters of the land, they know every aspect of this world.\n\n>Crafting and Harvesting buff; Low Health buff",
+    "sea-voyager": "Pirates, Corsairs, ocean creatures and more... Sea Voyagers built their bodies with high agility to survive.\n\n>Initial Dexterity buff; Crit % buff; Low Health buff",
+    "sky-dreamer": "Dreaming of realities yet to come, this mans train their bodies and minds to endure anything standing between them and their objective.\n\n>Initial Defense buff; Dmg mitigation; High Health buff",
+    "none": "Choose your blessing, traveller...",
 }
 
 
@@ -101,9 +113,7 @@ def new_game_window(game):
         )
 
     with b_col_3:
-        st.write(
-            "Aqui vai ficar um textinho, que vai trocando conforme tu clica nas passivas 👍"
-        )
+        st.info(descriptions.get(st.session_state.alignment, "Escolha um destino."))
 
     with b_col_4:
         st.button(
