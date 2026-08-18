@@ -44,10 +44,10 @@ alignment_map = {
 descriptions = {
     "sun-born": "Born graced by the sunlight, this creatures know too well how to take advantage over foes weakness...\n\n>Low Mana buff; Stronger elemental strikes",
     "moon-blessed": "Born with a touch of the moonlight, this specimens have a natural connection to the mana lines. \n\n>High Mana buff; Initial Charisma buff",
-    "stars-gazer": "Pointed ears, and eagle eyes, the Star Gazers will see you days before you even appear.\n\n >Initial Attack buff; Crit multiplier buff",
+    "stars-gazer": "Pointed ears, and eagle eyes, the Star Gazers will see you days before you even appear in sight.\n\n >Initial Attack buff; Crit multiplier buff",
     "land-dweller": "Drifters of the land, they know every aspect of this world.\n\n>Crafting and Harvesting buff; Low Health buff",
     "sea-voyager": "Pirates, Corsairs, ocean creatures and more... Sea Voyagers built their bodies with high agility to survive.\n\n>Initial Dexterity buff; Crit % buff; Low Health buff",
-    "sky-dreamer": "Dreaming of realities yet to come, this mans train their bodies and minds to endure anything standing between them and their objective.\n\n>Initial Defense buff; Dmg mitigation; High Health buff",
+    "sky-dreamer": "Dreaming of realities yet to come, this men train their bodies and minds to endure anything standing between them and their objective.\n\n>Initial Defense buff; Dmg mitigation; High Health buff",
     "none": "Choose your blessing, traveller...",
 }
 

@@ -15,3 +15,7 @@ if st.session_state.current_place == "new_game":
     new_game_window(running_game)
 if st.session_state.current_place == "camp":
     camp_window(running_game)
+if st.session_state.current_place == "hangouts":
+    hangouts_window(running_game)
+if st.session_state.current_place == "hangout-detail":
+    hangout_detail_window(running_game)

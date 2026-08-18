@@ -17,7 +17,7 @@ def begin_window(game):
             go_to("load_game")
         if st.button("Learn more **about** this world", width="stretch"):
             go_to("about")
-
+    
     st.html("<br><br><br><br>")
     st.write(":violet[@catelanirocha]")
     st.write("Heimur Game 4.0")
